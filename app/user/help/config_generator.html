@@ -1,0 +1,108 @@
+<div layout="row" flex>
+        <div layout="column" flex>
+                <md-card>
+                        <md-toolbar class="md-table-toolbar md-default">
+                                <div class="md-toolbar-tools">
+                                        <span class="md-title">Generador de configuración</span>
+                                </div>
+                        </md-toolbar>
+                        <md-card-content>
+                                <p class="panel-subtitle">Configura, descarga y a minar !!!</p>
+			
+				<div layout="column" layout-padding="" ng-cloak="" class="inputExamples" >  
+    
+			        <md-input-container flex="50">
+			          <label>Elige tu hardware</label>
+			          <md-icon class="material-icons">computer</md-icon>
+			          <md-select name="type" ng-model="example_attr['with_custom_port']" ng-change="updateExample()" required="">
+			            <md-option value="3333">Puerto 3333 (CPUs lentas)</md-option>
+			            <md-option value="5555">Puerto 5555 (CPUs rápidas)</md-option>
+			            <md-option value="7777">Puerto 7777 (GPU rigs)</md-option>
+			            <md-option value="9000">Puerto 9000 (Claymore SSL)</md-option>
+<!--				    <md-option value="80">Port 80 (Firewall bypass)</md-option>
+				    <md-option value="443">Port 443 (Firewall bypass SSL)</md-option> -->
+			          </md-select>
+			        </md-input-container>
+			            
+			        <md-input-container class="md-icon-float md-block">
+			          <label>Dirección pública del monedero</label>
+			          <md-icon class="material-icons">account_balance_wallet</md-icon>
+			          <input ng-model="example_attr['with_custom_wallet']" ng-change="updateExample()" type="text" required="">
+                      <span id="info-monero-address">
+                          <!-- <a ng-disabled="!linkClicked" ng-class="{disabled: linkClicked}" href="" ng-click="generateWallet()">Pulsa aquí para generar tu dirección de monero</a> si no dispones de una. Guárdate en un lugar seguro el PDF que se vas a descargar. -->
+                          <div>
+                              Si no tienes ninguna
+                              <button class="md-raised md-accent md-button ng-scope md-ink-ripple" type="button" aria-label="Genera tu cartera" ng-class="{disabled: linkClicked}" ng-click="generateWallet()">
+                                                    genera tu cartera
+                              </button> y <b>guárdate el PDF</b> descargado en un lugar seguro.
+                          </div>
+
+                      </span>
+                      <a id="monero-address-file"></a>
+			        </md-input-container>
+			        <div layout="row" flex>
+			        <div flex="initial">  
+			        <md-switch ng-model="example_attr['with_worker_id']" ng-change="updateExample()" aria-label="Worker">
+			        </md-switch> 
+			        </div>
+			        <div flex="100">
+			        <md-input-container class="md-icon-float md-block">  
+			          <label>Nombre del trabajador</label>
+			          <md-icon class="material-icons">add_box</md-icon>
+			          <input ng-model="example_attr['with_custom_worker']" ng-disabled="!example_attr['with_worker_id']" ng-change="updateExample()" type="text">
+			        </md-input-container>
+			        </div>
+			        </div>
+			        <div layout="row" flex>
+			        <div flex="initial">  
+                      <md-switch ng-model="example_attr['with_mail']" ng-change="updateExample()" aria-label="Email">
+			        </md-switch>
+			        </div>
+			        <div flex="100">
+			        <md-input-container class="md-icon-float md-block">
+			          <label>Dirección E-mail</label>
+			          <md-icon class="material-icons">email</md-icon>
+			          <input type="email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" ng-model="example_attr['with_custom_email']" ng-disabled="!example_attr['with_mail']" ng-change="updateExample()" type="text">
+			        </md-input-container>        
+			        </div>
+			        </div>
+			</div>
+			
+<!--			<h3>Ejemplo de configuración para <a href="https://github.com/fireice-uk/xmr-stak-cpu/releases" target="_blank">XMR-STAK-CPU</a>, <a href="https://github.com/fireice-uk/xmr-stak-amd/releases" target="_blank">XMR-STAK-AMD</a>, <a href="https://github.com/fireice-uk/xmr-stak-nvidia/releases" target="_blank">XMR-STAK-NVIDIA</a>:</h3>
+			<div class="md-body-1 code-snippet" layout='row' flex>
+					<code class='code-snippet'>
+						"pool_address": "{{ xmr_config_micolabs['pool_address'] }}",</br>
+						"wallet_address": "{{ xmr_config_micolabs['username'] }}",</br>
+						"pool_password": "{{ xmr_config_micolabs['password'] }}",</br>
+					</code>
+			</div>
+-->
+                        <h2>XMRIG para CPU: &nbsp; <a href="http://xmrpool.micolabs.com/downloads/xmrig-ubuntu">Linux</a> &nbsp; | &nbsp; <a href="http://xmrpool.micolabs.com/downloads/xmrig-mac">Mac</a> &nbsp; | &nbsp; <a href="http://xmrpool.micolabs.com/downloads/xmrig-win32.exe">Win32</a> &nbsp; | &nbsp; <a href="http://xmrpool.micolabs.com/downloads/xmrig-win64.exe">Win64</a></h2>
+                        <h2>XMRIG para NVIDIA: &nbsp; <a href="http://xmrpool.micolabs.com/downloads/xmrig-nvidia-cuda8-win64.exe">Win64-Cuda8</a> &nbsp; | &nbsp; <a href="http://xmrpool.micolabs.com/downloads/nvidia-cuda9-win64.exe">Win64-Cuda9</a></h2>
+                        <h2>XMRIG para AMD: &nbsp; <a href="http://xmrpool.micolabs.com/downloads/xmrig-amd-beta2-win32.exe">Win32</a> &nbsp; | &nbsp; <a href="http://xmrpool.micolabs.com/downloads/xmrig-amd-beta2-win64.exe">Win64</a></h2>
+
+			<br>
+			<h2>Configuración para XMRIG: (<a id="config-file-down" href="">Descargar configuración</a>)</h2>
+                        Tú configuración tendrá los siguientes valores:<br><br>
+			<div class="md-body-1 code-snippet" layout='row' flex>
+				<code class='code-snippet'>      
+					"url": "{{ xmr_config_micolabs['pools'][0]['url'] }}",</br>
+					"user": "{{ xmr_config_micolabs['pools'][0]['user'] }}",</br>
+					"pass": "{{ xmr_config_micolabs['pools'][0]['pass'] }}",</br>
+
+				</code>
+			</div>
+			<br>
+                        Una vez te hayas descargado el XMRIG, descarga el fichero de configuración, <b>ejecuta XMRIG y a minar</b>.
+<!--			<h3>Ejemplo de configuración para <a href="https://bitcointalk.org/index.php?topic=638915.0" target="_blank">Claymore's CryptoNote GPU Miner</a>:</h3>
+			<div class="md-body-1 code-snippet" layout='row' flex>
+					<code class='code-snippet'>      
+          -o stratum+tcp://{{xmr_config_micolabs['pool_address'] }}</br>
+          -u {{ xmr_config_micolabs['username'] }}</br>
+          -p {{ xmr_config_micolabs['password'] }}</br>
+					</code></br></br>*Para SSL usar stratum+ssl://
+			</div> 
+-->
+      <br>
+</md-card-content>
+</div>

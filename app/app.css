@@ -5,20 +5,19 @@ html, body {
   font-size:14px;
   margin: 0px;
   padding: 0px;
-  min-width: 420px;
+  min-width: 360px;
 }
 
 a {
   transition: color .4s;
-  color: #3287b3;
+  color: #ff7519;
 }
 
 a:link { text-decoration: none; },
-a:visited { color: #3b98c8; }
-a:hover   { color: #3b98c8; }
+a:hover   { color: #28303c; }
 a:active  {
   transition: color .3s;
-  color: #007BE6;
+  color: #28303c;
 }
 
 /*** Material Styles ***/
@@ -26,10 +25,49 @@ a:active  {
   background: #f3f5f7;
 }
 
-.maintoolbar {
-  background-color: #fff;
+.md-icon-button.md-button.md-ink-ripple > md-icon{
+  color: #fff;
 }
 
+md-ink-bar {
+  color: #ffe1d2 !important;
+  background: #ffe1d2 !important;
+}
+
+.md-button.md-accent.md-raised {
+  color: #ff7519;
+  background: #ffe1d2;
+}
+
+.md-raised.md-primary.md-button.md-ink-ripple {
+  color: #fff;
+  background: #ff7519;
+}
+
+.md-button.md-default-theme.md-fab, .md-button.md-fab {
+  color: #fff;
+  background: #ff7519 !important;
+}
+
+/* Added by me */
+.md-button.md-accent.md-raised:not([disabled]):hover {
+    background-color: #fff;
+}
+
+.md-button.md-fab:not([disabled]):hover {
+   background-color: rgb(40, 48, 60);
+}
+
+md-sidenav {
+    max-width: 270px;
+    min-width: 270px;
+}
+
+/* */
+.maintoolbar {
+  background: #ff7519;
+  color: #fff;
+}
 
 .statsbar md-card-title-text{
   text-align: right;
@@ -37,10 +75,12 @@ a:active  {
 
 .statsbar md-card md-card-title {
   padding: 12px ;
+  background: #ffe1d2;
 }
 
 .md-menu-toolbar {
-  background: #00796B;
+  background: #ffe1d2;
+  color: #ff7519;
 }
 
 md-tooltip .md-content {
@@ -105,6 +145,11 @@ md-tooltip .md-content {
   color: #fff !important;
 }
 
+.logo_img {
+  height: 50px;
+  margin: 10px;
+}
+
 .logo i {
   color: #00b0ff;
   font-weight: 700;
@@ -163,7 +208,7 @@ md-tooltip .md-content {
 }
 
 .navbar .login {
- color: #fff !important;
+  color: #ff7519 !important;
 }
 
 /* CHARTS */
@@ -222,4 +267,12 @@ md-dialog .login{
 
 .theironfist {
   cursor: pointer;
+}
+
+.material-icons {
+  color: #ff7519; /* orange monero */
+}
+
+.disabled {
+      cursor: not-allowed;
 }

@@ -1,6 +1,10 @@
 # Monero Pool frontend
 
+## Spanish translation and prepared to work witk xmrpool.micolabs.com domain.
+
 ### AngularJS based UI for [nodejs-pool](https://github.com/Snipa22/nodejs-pool)
+
+
 
 ### Features
 - See your hashrate on all pages

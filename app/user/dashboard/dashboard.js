@@ -23,12 +23,12 @@ app.controller('DashboardCtrl', function($scope , $route, $mdDialog, $pageVisibi
 
 	$scope.deleteAddress = function (key, ev){
 		var confirm = $mdDialog.confirm()
-		.title('Hide live stats?')
-		.textContent('You can add it back by entering your wallet address again')
-		.ariaLabel('Stop tracking payment address')
+		.title('Esconder las estadísticas en vivo?')
+		.textContent('Tu puedes volver añadiendo tu dirección de monero otra vez')
+		.ariaLabel('Para el seguimiento de pago de direcciones')
 		.targetEvent(ev)
-		.ok("Remove")
-		.cancel("Cancel");
+		.ok("Ok")
+		.cancel("Cancelar");
 		
 		$mdDialog.show(confirm).then(function() {
 			addressService.deleteAddress(key);
@@ -55,9 +55,9 @@ app.controller('DashboardCtrl', function($scope , $route, $mdDialog, $pageVisibi
 			fullscreen: !$scope.menuOpen
 		})
 		.then(function(answer) {
-			$scope.status = 'You said the information was "' + answer + '".';
+			$scope.status = 'Dijiste que la información era "' + answer + '".';
 		}, function() {
-			$scope.status = 'You cancelled the dialog.';
+			$scope.status = 'Cancelaste el cuadro de diálogo';
 		});
 	}
 

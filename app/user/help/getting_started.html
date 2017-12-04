@@ -3,55 +3,53 @@
 		<md-card>
 			<md-toolbar class="md-table-toolbar md-default">
 				<div class="md-toolbar-tools">
-					<span>Getting Started with {{GLOBALS.pool_name}}</span>
+					<span>Primero pasos con {{GLOBALS.pool_name}}</span>
 				</div>
 			</md-toolbar>
 			<md-card-content>
-				<p class="panel-subtitle">If you are new to mining, this is the place for you.</p>
-				<p class="panel-subtitle">take a deep breath, its only confusing at first but pure joy once up and running.</p>
+				<p class="panel-subtitle">Si eres nuevo en minería, este es tu lugar.</p>
+				<p class="panel-subtitle">Respira hondo, es un poco confuso al principio pero una vez en marcha empezaras a tener ingresos pasivos rápidamente.</p>
 			</md-card-content>
 		</md-card>
 		<md-card>
 			<md-toolbar class="md-table-toolbar md-default">
 				<div class="md-toolbar-tools">
-					<span>1. Create a Wallet</span>
+					<span>1. Crear un monedero</span>
 				</div>
 			</md-toolbar>
 			<md-card-content>
-				<p class="panel-subtitle">Both online wallets and hardware wallets have their pros and cons.</p>
-				<p class="panel-subtitle"><a href="https://www.mymonero.com" target="_blank">MyMonero</a> : MyMonero is an online wallet maintained by the core monero team, so while safe is still suceptable to hacks.</p>
-				<p class="panel-subtitle"><a href="https://getmonero.org/2016/12/22/monero-core-gui-beta-released.html" target="_blank">Monero GUI Wallet</a> : The safest way to safely store and secure your XMR, although it would be your responsibility to kee your XMR Safe.</p>
+				<p class="panel-subtitle">Tanto los monederos en línea como los de hardware tienen sus pros y sus contras.</p>
+				<p class="panel-subtitle"><a href="https://www.mymonero.com" target="_blank">MyMonero</a> : MyMonero es un monedero en linea mantenido por el equipo de monero,  aunque es un monedero seguro puede ser susceptible a hackeos.</p>
+				<p class="panel-subtitle"><a href="https://github.com/monero-project/monero-core/releases/latest" target="_blank">Monero GUI Wallet</a> : La manera más segura de almacenar y asegurar tus XMR, aunque es responsabilidad tuya mantenerlos a salvo.</p>
+				<p class="panel-subtitle"><a href="https://moneroaddress.org/" target="_blank">Generador Online</a> : Te permite generar una cartera de manera online para empezar rápidamente a minar.</p>
 			</md-card-content>
 		</md-card>
 		<md-card>
 			<md-toolbar class="md-table-toolbar md-default">
 				<div class="md-toolbar-tools">
-					<span>2. Download mining software</span>
+					<span>2. Descargar software de minería</span>
 				</div>
 			</md-toolbar>
 			<md-card-content>
-				<p class="panel-subtitle">AMD Miner</p>
-				<p class="panel-subtitle">Nvidia Miner</p>
-				<p class="panel-subtitle">CPU Miner (AESNI CPU's)</p>
-				<p class="panel-subtitle">CPU Miner (Older CPU's})</p>
+				<p class="panel-subtitle"><a href="https://github.com/xmrig/xmrig-amd/releases" target="_blank">Minero para AMD</a></p>
+				<p class="panel-subtitle"><a href="https://github.com/xmrig/xmrig-nvidia/releases" target="_blank">Minero para Nvidia</a></p>
+				<p class="panel-subtitle"><a href="https://github.com/xmrig/xmrig/releases" target="_blank">Minero para CPU</a></p>
 			</md-card-content>
 		</md-card>
 		<md-card>
 			<md-toolbar class="md-table-toolbar md-default">
 				<div class="md-toolbar-tools">
-					<span>3. Pick a server and port</span>
+					<span>3. Elige un servidor y un puerto</span>
 				</div>
 			</md-toolbar>
 			<md-card-content>
-				<p class="panel-subtitle">There are 2 important things here the <b>URL</b> and the <b>port</b> that you are going to connect to.</p>
-				<p>You need to pick your URL and Port from the Ports List. Here you'll notice theres Global, PPLNS, Solo (<a href="#/help/faq">?</a>)</p>
-				<p>Global is simply a collection of both PPLNS & Solo ports powerd by GEODNS. <br/>GEODNS automagically finds the closest server to you and could also be used to shares you in case of a regional outage.</p>
-				<p>If you prefer to shave off a few of those ms and connect directly, you have the option to select your preferred endpoint too.</p>
-				<p>The Port is used in conjunciton with the url and is used to specify the starting difficulty. You should select this depending on the total #ing power of your rig (see port descriptions).</p>
-				<p>If you are an advanced user or would like to set a fixed difficulty. examples below.</p>
+				<p class="panel-subtitle">Hay dos cosas importantes aquí, por un lado la <b>URL</b> y por otro el <b>puerto</b> por el cual tu vas a conectarte.</p>
+				<p>Necesitas elegir la URL y el Puerto de la lista de puertos. (<a href="#/help/faq">FAQ</a>)</p>
+				<p>El Puerto se utiliza junto con la URL para especificar la dificultad inicial. Deberías seleccionar el Puerto dependiendo de la potencia total de tu equipo (ver descripciones de puertos).</p>
+				<p>Si eres un usuario avanzado o quieres establecer una dificultad fija puedes ver ejemplos más abajo.</p>
 				<div flex layout="row">
 					<div flex></div>
-					<md-button ng-click="viewPorts($event)">View Ports list</md-button>
+					<md-button ng-click="viewPorts($event)">Ver listado de puertos</md-button>
 					<div flex></div>
 				</div>
 				<!-- <p class="panel-subtitle">Curious what the port types are?  Most miners are best served by PPLNS, which
@@ -63,22 +61,22 @@
 		<md-card>
 			<md-toolbar class="md-table-toolbar md-default">
 				<div class="md-toolbar-tools">
-					<span>The moment</span>
+					<span>Vamos al ĺío</span>
 				</div>
 			</md-toolbar>
 			<md-card-content>
-				<p class="panel-subtitle">OK So by now you should have a wallet, mining software, url and port. Its time to put them together.</p>
+				<p class="panel-subtitle">Entonces ya deberías tener un monedero, software de minería, URL y puerto. Es hora de juntarlos.</p>
 			</md-card-content>
 			<md-card-content>
-				<p>Here are some examples of the parameters that you need to pass on to your miner software, the format matters so be careful.</p>
-				<p>Depending on your miner you need to add the required parameters via command line or config.txt</p>
-				<p>Required fields are payment <b>address</b> and <b>MinerIdentifier</b></p>
+				<p>Estos son algunos ejemplos de los parámetros que necesitas pasar al software de minería, el formato importa asi que ten cuidado.</p>
+				<p>Dependiendo del software de minería necesitas agregar los parámetros requeridos vía línea de comandos o config.txt</p>
+				<p>Los campos obligatorios son <b>la dirección del monedero</b> y el <b>Identificador de minero</b></p>
 				<blockquote>
-					<i>Username format</i> : address.paymentID+FixedDifficulty<br/>
-					<i>Password Format</i> : MinerIdentifier:Email<br/>
+					<i>Formato usuario</i> : monedero.idPago+Dificultad<br/>
+					<i>Formato contraseña</i> : IdentificadorMinero:Correo<br/>
 				</blockquote>
 				<md-list flex>
-					<md-subheader class="md-no-sticky">Username / Password Samples</md-subheader>
+					<md-subheader class="md-no-sticky">Usuario / Contraseña Ejemplos</md-subheader>
 					<md-divider></md-divider>
 					<md-list-item class="md-3-line" ng-repeat="sample in samples">
 					  <div class="md-list-item-text" layout="column">
@@ -93,6 +91,6 @@
 				 </md-list>
 			</md-card-content>
 		</md-card>
-		<h3 class="text-center">Happy Mining !</h3>
+		<h3 class="text-center">Feliz minado y que la fuerza te acompañe!</h3>
 	</div>
 </div>

@@ -10,7 +10,7 @@
 					</md-card-title-media>
 					<md-card-title-text>
 						<span class="md-headline">{{poolStats.global.totalHashes | number}}</span>
-						<span class="md-subhead">Hashes Accepted</span>
+						<span class="md-subhead">Hashes Aceptados</span>
 					</md-card-title-text>
 				</md-card-title>
 			</md-card>
@@ -26,7 +26,7 @@
 					<md-card-title-text>
 						<div class="md-headline">{{poolStats.global.totalBlocksFound}}</div>
 						<div class="md-subhead">
-							<span>Blocks Found (<span am-time-ago="poolStats.global.lastBlockFoundTime*1000"></span>)
+							<span>Bloques encontrados (<span am-time-ago="poolStats.global.lastBlockFoundTime*1000"></span>)
 							<md-tooltip md-direction="bottom">
 						    	{{poolStats.global.lastBlockFoundTime*1000 | date:'hh:mm:ss dd/MM/yy'}}
 						     </md-tooltip>
@@ -47,7 +47,7 @@
 					</md-card-title-media>
 					<md-card-title-text>
 						<span class="md-headline">{{poolStats.global.miners}}</span>
-						<span class="md-subhead">Miners Connected</span>
+						<span class="md-subhead">Mineros Conectados</span>
 					</md-card-title-text>
 				</md-card-title>
 			</md-card>
@@ -62,7 +62,7 @@
 					</md-card-title-media>
 					<md-card-title-text>
 						<span class="md-headline">{{poolStats.global.totalMinersPaid}}</span>
-						<span class="md-subhead">Miners Paid <a href="#/payments">({{poolStats.global.totalPayments}} Payments)</a></span>
+						<span class="md-subhead">Mineros pagados <a href="#/payments">({{poolStats.global.totalPayments}} Pagos)</a></span>
 					</md-card-title-text>
 
 				</md-card-title>

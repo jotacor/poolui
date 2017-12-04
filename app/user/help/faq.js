@@ -18,91 +18,75 @@ app.controller('FAQCtrl', function($scope, $location, $anchorScroll, $sce, dataS
     $scope.faq = {
         "General" : [
         {
-            title: "What is Monero?",
-            answer: $sce.trustAsHtml("Monero is a cryptocurrency that promises untraceability and privacy. It accomplishes this by obfuscating and encrypting transactions beyond recognition, while allowing you to discreetly view and manage your assets. You can also prove your transactions to a third party if necessary.<br/>"),
+            title: "Que es Monero?",
+            answer: $sce.trustAsHtml("Monero es una criptomoneda que promete irrastreabilidad y privacidad. Esto se logra ofuscando y cifrando transacciones más allá del reconocimiento, mientras que le permite ver y administrar sus activos de forma discreta. También puedes probar tus transacciones a un tercero si es necesario.<br/>"),
             media:
             // {
             //     "title": "Simple",
             //     "url": $sce.trustAsResourceUrl("https://www.youtube.com/embed/TZi9xx6aiuY?ecver=1")
             // }
             {
-                "title": "Monero essentials video",
+                "title": "Video esencial de monero",
                 "url": $sce.trustAsResourceUrl("https://www.youtube.com/embed/6DQb0cMvU7I?ecver=1")
             }
         },
 
         {
-            title: "What is mining and why should I be interested?",
-            answer: $sce.trustAsHtml("Cryptocurrencies achieve decentralisation via a process called mining. When new transactions are created, they need to be validated. Miners compete with each other to validate a group of transactions(a.k.a. block). The winning miner is paid a block reward and collects transaction fees for the work carried out. Block rewards are also how new coins are generated and help regulate the economy of the currency.")
+            title: "Que es minar y porque debería de estar interesado?",
+            answer: $sce.trustAsHtml("Las criptomonedas alcanzan la descentralización a través de un proceso llamado minería. Cuando se crean nuevas operaciones, es necesario validarlas. Los mineros compiten entre sí para validar un grupo de transacciones (también conocido como bloque). El minero ganador cobra una recompensa por el trabajo realizado. Las recompensas del bloque encontrado son también la forma en que se generan las nuevas monedas y ayudan a regular la economía de la moneda.")
         },
         {
-            title: "How do I start mining?",
-            answer: $sce.trustAsHtml("You can start mining today if you have a computer that sits idle. Monero can be mined on CPUs, GPU's or even a raspberry PI. To start mining you need to find the right mining software for your hardware and get going.<br/><br/>Read <a hred='#/help/getting_started'>Getting Started</a> for more details.")
+            title: "Como debería de empezar con la míneria?",
+            answer: $sce.trustAsHtml("Puede comenzar a minar hoy mismo si tienes un ordenador que este inactivo. Monero se puede minar con CPUs, GPU's o incluso en una raspberry PI. Para comenzar con la minería necesitas encontrar el software de minería adecuado para tu hardware. <br/><br/>Lee <a href=' #/help/config_generator' >Configurador de inicio</a> para más detalles.")
         },
         {
-            title: "What is pool mining?",
-            answer: $sce.trustAsHtml("If you are mining on a small scale, it becomes extremely hard and unpredictable to earn a stable profit on your mining income. Pool mining gives you the opportunity to join a group of miners and share earnings for a consistent payout.")
+            title: "Que es pool de mineria?",
+            answer: $sce.trustAsHtml("Si estas minando a pequeña escala, se vuelve extremadamente difícil e impredecible obtener un beneficio estable de tus mineros. Un pool de minería te da la oportunidad de unirse a un grupo de mineros y compartir ganancias para un pago consistente.")
         },
         {
-            title: "What is PPLNS?",
-            answer: $sce.trustAsHtml("PPLNS is short for pay per last N shares. It is a method to split miner earnings fairly based on rounds. PPLNS hence favours loyal pool memebers over pool hoppers.")
+            title: "Que es PPLNS?",
+            answer: $sce.trustAsHtml("El PPLNS es la abreviatura de pago por las últimas N acciones. Es un método para dividir las ganancias de los mineros de manera justa en función de las rondas. Por lo tanto, el PPLNS favorece a los miembros leales del pool.")
         },
         {
-            title: "What does SOLO mining mean?",
-            answer: $sce.trustAsHtml("Solo mining is the opposite of pool mining. You essentially submit your shares directly to the blockchain, which is the most profitable method if you run your own farm.")
-        },
-        {
-            title: "Is mining profitable?",
-            answer: $sce.trustAsHtml("Mining can be profitable depending on the conditions involved. Your primary cost is your electricity and the cost of your hardware.<br/>It is not practical to calculate the exact amount you would earn as it depends on the total hash rate of the network, difficulty and your luck.<br/><br/>An accurate estimate of earnings of the pool can be calculated by observing average daily number of blocks found ... followed by some mathematics?<br/><br/>* An earnings estimator may be implemented in the future.")
+            title: "Es la minería rentable?",
+            answer: $sce.trustAsHtml("La minería puede ser rentable dependiendo de las condiciones involucradas. El coste primario es la electricidad y el hardware. <br/> No es fácil calcular la cantidad exacta que ganarías, ya que depende de la tasa de hash total de la red, la dificultad y la suerte.")
         },
         ],
-        "Pool Help": [
+        "Ayuda para el Pool": [
         {
-            title: "How payouts work?",
-            answer: $sce.trustAsHtml("You might often wonder why you haven't been paid yet. This is normal and is how the payment cycle is designed to work.<br/><br/>Every 2 hours a master payment check is executed which pays out all dues. If everything goes as planned all dues that exceed the set payment thresholds are paid out. <br/><br/>In case of a wallet lock up or failure, the pool automatically requeues futher checks at 15 minute intervals until all payments are successfully completed. Once everything is paid out the system returns to the 2 hourly master cycle.<br/><br/> If you have any questions please dont hesitate to contact your pool admin.")
+            title: "Como funcionan los pagos?",
+            answer: $sce.trustAsHtml("A menudo te preguntarás por qué no te han pagado todavía. Esto es normal y es cómo el ciclo de pago está diseñado para funcionar. <br/><br/>Cada 2 horas se ejecuta un cheque de pago principal que paga todas las cuotas. Si todo va según lo planeado, se pagan todas las cuotas que superan los umbrales de pago establecidos. <br/><br/>En caso de que el monedero se bloquee o falle, el pool solicitará automáticamente más cheques a intervalos de 15 minutos hasta que todos los pagos se completen satisfactoriamente. Una vez que todo está pagado, el sistema vuelve al ciclo normal de 2 horas. <br/><br/><br/> Si tiene alguna pregunta no dude en ponerse en contacto.")
         },
         {
-            title: "Payout thresholds?",
-            answer: $sce.trustAsHtml("Payout threshold is the minimum amount that needs to be earned before the pool pays out to your wallet. Since transactions in Monero have a significant miner fees, it's cost effective to set a higher payout threshold for your pool. The minimum value for this is usually 0.3 XMR.<br/><br/>To change your payment threshold, click the wrench after you login via \"Login\" button on the top right.<br/><br/>You could also adjust your payout threshold to regulate your payout schedule etc daily/weekly etc depending on your hash rate.")
+            title: "Umbrales de pago?",
+            answer: $sce.trustAsHtml("El umbral de pago es la cantidad mínima que necesita ser ganada antes de que el pool te pague a tu monedero. Debido a que las transacciones en Monero tienen una tarifa minera significativa, es rentable establecer un umbral de pago más alto para tu pool. El valor mínimo para esto es 0.1 XMR. <br/><br/>Para cambiar tu umbral de pago, haz clic en la llave inglesa después de entrar a través del botón Login en la parte superior derecha. <br/><br/>Podrías también ajustar tu umbral de pago para regular tu programa de pagos, etc. diariamente/semanal, dependiendo de tu tasa de hash.")
         },
         {
-            title: "Getting paid in BTC",
-            answer: $sce.trustAsHtml("nodejs-pool supports direct payments to btc. This is done by using the shapeshift API to convert your XMR and send them to a BTC wallet.<br/><br/>To configure BTC payments please have a look at <a href='#/help/getting_started'>Getting Started</a> command line samples.")
+            title: "Pagos a exchanges o brokers?",
+            answer: $sce.trustAsHtml("Pagos directos a exchanges / brokers están soportados. La única diferencia principal cuando se usa este método es que el umbral de pago mínimo es más alto y generalmente un valor predeterminado de 5XMR.")
         },
         {
-            title: "Payments to exchanges/markets?",
-            answer: $sce.trustAsHtml("Direct payment to exchange / pool wallets are supported. The only primary difference when using this method is that the minimum payout threshold is higher and usually a defaults to 3XMR.")
+            title: "Baneo de IP?",
+            answer: $sce.trustAsHtml("Tu IP queda bloqueada si envías partes no válidas al servidor de pool. Esto sucede generalmente si su tarjeta es overclocked o inestable. <br/><br/><br/> La prohibición es temporal y generalmente se elimina en unos minutos. También puedes ponerte en contacto con el administrador de tu pool y solicitar que te quiten del baneo.")
         },
         {
-            title: "IP Banning?",
-            answer: $sce.trustAsHtml("Your IP gets banned if you submit invalid shares to the pool server. This usually happens if your card is overclocked or unstable.<br/><br/> The ban is temporary and usually cleared in xx mins. You could also contact your pool admin and request an unban.")
+            title: "Como funciona la dificultad Fija / Variable",
+            answer: $sce.trustAsHtml("Cuando seleccionas un puerto de pool, la dificultad inicial sólo representa tu configuración inicial. Tan pronto como tu minero empiece a enviar archivos compartidos, el servidor intentará ajustar tu dificultad para reflejar tu tasa de hash. <br/><br/>Esto te asegura que no crearás demasiadas o muy pocas peticiones a tu servidor optimizando el consumo de ancho de banda y las cargas del servidor. <br/><br/>Opcionalmente podrías establecer una dificultad fija a través de las opciones de la línea de comandos de tu minero, aunque si estableces una dificultad demasiado alta, podrías exceder el límite de 60 segundos de trabajo y perder las ganancias.")
         },
-        {
-            title: "How Fixed / Variable Difficulty works",
-            answer: $sce.trustAsHtml("When you select a pool port, the starting difficulty only represents your initial setting. As soon as your miner starts submitting shares the server will try to adjust your difficulty to reflect your hash rate.<br/><br/>This assures you not creating too many or too few requests to your server optimizing bandwidth consumption and server loads.<br/><br/>Optionally you could set a fixed difficulty via your miner command line options, though if you set a difficulty too high, you could exceed the 60 seconds job limit and loose earnings.")
-        },
-        {
-            title: "Can i mine other coins?",
-            answer: $sce.trustAsHtml("Not yet, but we may add more soon. Follow <a href='https://github.com/Snipa22/nodejs-pool/issues/27' target='_new'>https://github.com/Snipa22/nodejs-pool/issues/27</a>.")
-        }
         ],
-        "Mining":[
+        "Minería":[
         {
             title: "Hardware?",
-            answer: $sce.trustAsHtml("Monero is an AISC resistant cryptocurrency, that means it should be cost prohibitive to mine monero with an FGPA/AISC allowing desktop grade hardware to keep its share in the network hashrate and earnings.<br/><br/><a href='http://monerobechmarks.byethost5.com/' target='_new'>http://monerobechmarks.byethost5.com/</a> is a list of community collected hashrate results ordered by hardware, but be careful as some entries may not be accurate.")
+            answer: $sce.trustAsHtml("Monero es una criptodivisa resistente a asic, lo que significa que debe tener un costo prohibitivo para minar a monero con un FGPA/ASIC permitiendo que el hardware de escritorio mantenga su participación en el hashrate y las ganancias de la red.")
         },
         {
             title: "Software?",
-            answer: $sce.trustAsHtml("Read -- <a href='#/help/getting_started'>Getting Started</a>.")
+            answer: $sce.trustAsHtml("Lea -- <a href='#/help/config_generator'>Configurador de inicio</a>.")
         }
         ],
-        "Support":[
+        "Soporte":[
         {
-            title: "Chat Support",
-            answer: $sce.trustAsHtml("Monero is an AISC resistant cryptocurrency, that means it should be cost prohibitive to mine monero with an FGPA/AISC allowing desktop grade hardware to keep its share in the network hashrate and earnings.<br/><br/><a href='http://monerobechmarks.byethost5.com/' target='_new'>http://monerobechmarks.byethost5.com/</a> is a list of community collected hashrate results ordered by hardware, but be careful as some entries may not be accurate.")
-        },
-        {
-            title: "Interesting links.",
+            title: "Links interesantes.",
             answer: $sce.trustAsHtml("<a href='http://reddit.com/r/moneromining' target='_new'>http://reddit.com/r/moneromining/</a><br/><a href='http://monero.stackexchange.com/' target='_new'>http://monero.stackexchange.com/</a>")
         }
         ]

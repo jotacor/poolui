@@ -8,6 +8,6 @@ app.controller('PortsModalCtrl', function($scope, $mdDialog, dataService) {
 	});
 
 	$scope.answer = function (answer) {
-		$mdDialog.hide('close')
+		$mdDialog.hide('Cerrar')
 	}
 });
